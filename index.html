@@ -354,7 +354,7 @@
               <div class="letter-company">Prime Axis Consultancy</div>
             </div>
             <div class="letter-stamp">
-              <div style="font-size:.75rem; color:var(--cyan); font-weight:700;">www.primeaxisconsultancy.com</div>
+              <div style="font-size:.75rem; color:var(--cyan); font-weight:700;">https://www.primeaxis.qa/</div>
               <div style="font-size:.72rem; color:var(--silver); margin-top:3px;">Qatar, 2026</div>
             </div>
           </div>
@@ -425,11 +425,11 @@
                     </div>
                     <div style="font-size:.84rem; color:var(--silver);">
                       <i class="fas fa-globe me-2 text-cyan"></i>
-                      <a href="https://www.primeaxisconsultancy.com" style="color:var(--white); text-decoration:none;">www.primeaxisconsultancy.com</a>
+                      <a href="https://www.primeaxis.qa/" style="color:var(--white); text-decoration:none;">https://www.primeaxis.qa/</a>
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-5 d-flex justify-content-sm-end justify-content-start mt-4 mt-sm-0">
+                <!-- <div class="col-sm-5 d-flex justify-content-sm-end justify-content-start mt-4 mt-sm-0">
                   <div style="text-align:center;">
                     <div style="width:90px; height:90px; border-radius:50%; background:linear-gradient(135deg,rgba(26,111,196,.2),rgba(0,180,216,.15)); border:2px solid var(--border); display:flex; align-items:center; justify-content:center; margin:0 auto;">
                       <div style="text-align:center;">
@@ -439,7 +439,7 @@
                     </div>
                     <div style="font-size:.65rem; color:var(--silver); margin-top:6px; letter-spacing:1px;">Official Seal</div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -515,11 +515,12 @@
       <div class="col-lg-5">
         <div class="contact-info-card">
           <h5 style="font-weight:700; margin-bottom:20px;">Contact Information</h5>
+  
           <div class="contact-row">
-            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
             <div>
-              <div class="contact-label">Phone</div>
-              <div class="contact-val"><a href="tel:+97477660708">+974 7766 0708</a></div>
+              <div class="contact-label">WhatsApp</div>
+              <div class="contact-val"><a href="https://wa.me/97477660708" target="_blank">+974 77660708</a></div>
             </div>
           </div>
           <div class="contact-row">
@@ -533,14 +534,14 @@
             <div class="contact-icon"><i class="fas fa-globe"></i></div>
             <div>
               <div class="contact-label">Website</div>
-              <div class="contact-val"><a href="https://www.primeaxisconsultancy.com" target="_blank">www.primeaxisconsultancy.com</a></div>
+              <div class="contact-val"><a href="https://www.primeaxis.qa/" target="_blank">www.primeaxis.qa</a></div>
             </div>
           </div>
           <div class="contact-row">
             <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
             <div>
               <div class="contact-label">Location</div>
-              <div class="contact-val">Qatar</div>
+              <div class="contact-val">Doha, Qatar</div>
             </div>
           </div>
         </div>
@@ -552,52 +553,54 @@
       <div class="col-lg-7">
         <div style="background:var(--card-bg); border:1px solid var(--border); border-radius:20px; padding:40px;">
           <h5 style="font-weight:700; margin-bottom:24px;">Send Us a Message</h5>
-          <div class="row g-3">
+          <form id="contact-form" class="row g-3">
             <div class="col-sm-6">
               <div class="form-group-pa">
                 <label class="form-label-pa">Full Name</label>
-                <input type="text" class="form-control-pa" placeholder="Your full name"/>
+                <input type="text" class="form-control-pa" name="full_name" placeholder="Your full name" required/>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="form-group-pa">
                 <label class="form-label-pa">Email Address</label>
-                <input type="email" class="form-control-pa" placeholder="your@email.com"/>
+                <input type="email" class="form-control-pa" name="email" placeholder="your@email.com" required/>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="form-group-pa">
                 <label class="form-label-pa">Phone Number</label>
-                <input type="tel" class="form-control-pa" placeholder="+974 XXXX XXXX"/>
+                <input type="tel" class="form-control-pa" name="phone" placeholder="+974 XXXX XXXX"/>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="form-group-pa">
                 <label class="form-label-pa">Service Interest</label>
-                <select class="form-control-pa">
+                <select class="form-control-pa" name="service_interest" required>
                   <option value="" style="background:#0d1526;">Select a service</option>
-                  <option style="background:#0d1526;">Healthcare RCM</option>
-                  <option style="background:#0d1526;">MOPH Licensing</option>
-                  <option style="background:#0d1526;">Company Formation</option>
-                  <option style="background:#0d1526;">HR Services &amp; Kits</option>
-                  <option style="background:#0d1526;">IT Consultancy</option>
-                  <option style="background:#0d1526;">Data Management</option>
                   <option style="background:#0d1526;">Document Services</option>
+                  <option style="background:#0d1526;">Company Formation Services</option>
+                  <option style="background:#0d1526;">Healthcare RCM Services</option>
+                  <option style="background:#0d1526;">IT &amp; Healthcare Consultancy</option>
+                  <option style="background:#0d1526;">HR Services &amp; HR Kits</option>
+                  <option style="background:#0d1526;">Data Management</option>
                 </select>
               </div>
             </div>
             <div class="col-12">
               <div class="form-group-pa">
                 <label class="form-label-pa">Message</label>
-                <textarea class="form-control-pa" rows="5" placeholder="Tell us about your requirements..."></textarea>
+                <textarea class="form-control-pa" name="message" rows="5" placeholder="Tell us about your requirements..." required></textarea>
               </div>
             </div>
             <div class="col-12 mt-2">
-              <button class="btn-primary-pa" style="width:100%; text-align:center; cursor:pointer;" onclick="alert('Thank you! We will be in touch soon.')">
+              <button type="submit" class="btn-primary-pa" style="width:100%; text-align:center; cursor:pointer;">
                 <i class="fas fa-paper-plane me-2"></i> Send Message
               </button>
             </div>
-          </div>
+            <div class="col-12">
+              <div id="contact-form-status" style="display:none; font-size:.86rem; color:var(--silver);"></div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -615,8 +618,8 @@
         </div>
         <p class="footer-desc">Bridging Healthcare &amp; Technology for Smarter Growth. Specialized consulting for healthcare providers and businesses in Qatar.</p>
         <div class="mt-3">
-          <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/company/primeaxis-consultancy/" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/97477660708" class="social-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
           <a href="mailto:Info@primeaxis.qa" class="social-btn"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
@@ -638,15 +641,16 @@
       <div class="col-sm-4 col-lg-3">
         <div class="footer-heading">Contact</div>
         <a class="footer-link" href="tel:+97477660708"><i class="fas fa-phone me-2 text-cyan"></i>+974 7766 0708</a>
+        <a class="footer-link" href="https://wa.me/97477660708" target="_blank"><i class="fab fa-whatsapp me-2 text-cyan"></i>+97477660708</a>
         <a class="footer-link" href="mailto:Info@primeaxis.qa"><i class="fas fa-envelope me-2 text-cyan"></i>Info@primeaxis.qa</a>
-        <a class="footer-link" href="https://www.primeaxisconsultancy.com" target="_blank"><i class="fas fa-globe me-2 text-cyan"></i>primeaxisconsultancy.com</a>
-        <div class="footer-link" style="cursor:default;"><i class="fas fa-map-marker-alt me-2 text-cyan"></i>Qatar</div>
+        <a class="footer-link" href="https://www.primeaxis.qa/" target="_blank"><i class="fas fa-globe me-2 text-cyan"></i>primeaxis.qa</a>
+        <div class="footer-link" style="cursor:default;"><i class="fas fa-map-marker-alt me-2 text-cyan"></i>Doha, Qatar</div>
       </div>
     </div>
     <hr class="footer-divider"/>
     <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
       <div class="footer-copy">© 2026 Prime Axis Consultancy. All rights reserved.</div>
-      <div class="footer-copy">Ready to handle anytime &nbsp;·&nbsp; <span class="text-cyan">www.primeaxisconsultancy.com</span></div>
+      <div class="footer-copy">Ready to handle anytime &nbsp;·&nbsp; <span class="text-cyan">https://www.primeaxis.qa/</span></div>
     </div>
   </div>
 </footer>
