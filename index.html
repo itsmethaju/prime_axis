@@ -557,7 +557,7 @@
             <div class="col-sm-6">
               <div class="form-group-pa">
                 <label class="form-label-pa">Full Name</label>
-                <input type="text" class="form-control-pa" name="full_name" placeholder="Your full name" required/>
+                <input type="text" class="form-control-pa" name="name" placeholder="Your full name" required/>
               </div>
             </div>
             <div class="col-sm-6">
@@ -569,7 +569,7 @@
             <div class="col-sm-6">
               <div class="form-group-pa">
                 <label class="form-label-pa">Phone Number</label>
-                <input type="tel" class="form-control-pa" name="phone" placeholder="+974 XXXX XXXX"/>
+                <input type="tel" class="form-control-pa" name="phone" placeholder="+974 XXXX XXXX" required/>
               </div>
             </div>
             <div class="col-sm-6">
@@ -577,12 +577,12 @@
                 <label class="form-label-pa">Service Interest</label>
                 <select class="form-control-pa" name="service_interest" required>
                   <option value="" style="background:#0d1526;">Select a service</option>
-                  <option style="background:#0d1526;">Document Services</option>
-                  <option style="background:#0d1526;">Company Formation Services</option>
-                  <option style="background:#0d1526;">Healthcare RCM Services</option>
-                  <option style="background:#0d1526;">IT &amp; Healthcare Consultancy</option>
-                  <option style="background:#0d1526;">HR Services &amp; HR Kits</option>
-                  <option style="background:#0d1526;">Data Management</option>
+                  <option value="Document Services" style="background:#0d1526;">Document Services</option>
+                  <option value="Company Formation Services" style="background:#0d1526;">Company Formation Services</option>
+                  <option value="Healthcare RCM Services" style="background:#0d1526;">Healthcare RCM Services</option>
+                  <option value="IT & Healthcare Consultancy" style="background:#0d1526;">IT &amp; Healthcare Consultancy</option>
+                  <option value="HR Services &amp; HR Kits" style="background:#0d1526;">HR Services &amp; HR Kits</option>
+                  <option value="Data Management" style="background:#0d1526;">Data Management</option>
                 </select>
               </div>
             </div>
@@ -656,6 +656,9 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<!-- Production: set your Vercel API URL before contact.js loads -->
+<!-- <script>window.PRIME_AXIS_API_BASE = "https://YOUR-PROJECT.vercel.app";</script> -->
 <script src="assets/js/prime_axis_consultancy.js"></script>
+<script type="module" src="assets/js/contact.js"></script>
 </body>
 </html>
