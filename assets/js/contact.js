@@ -16,6 +16,12 @@ function parseApiError(data) {
   return data.message || "Failed to send message.";
 }
 
+function trackContactConversion() {
+  if (typeof gtag === "function") {
+    gtag("event", "ads_conversion_Contact_1", {});
+  }
+}
+
 export async function submitContactForm(formElement, apiBaseUrl = API_BASE_URL) {
   const formData = new FormData(formElement);
   const response = await fetch(`${apiBaseUrl.replace(/\/$/, "")}/api/contact`, {
@@ -49,6 +55,7 @@ function initContactForm() {
 
     try {
       const data = await submitContactForm(form);
+      trackContactConversion();
       form.reset();
       statusEl.style.color = "var(--cyan)";
       statusEl.textContent =
