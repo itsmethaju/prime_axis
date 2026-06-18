@@ -22,6 +22,63 @@ function trackContactConversion() {
   }
 }
 
+// Google tag (gtag.js) event - delayed navigation helper
+function gtagSendEvent(url) {
+  const callback = function () {
+    if (typeof url === "string") {
+      window.location = url;
+    }
+  };
+
+  if (typeof gtag !== "function") {
+    callback();
+    return false;
+  }
+
+  gtag("event", "ads_conversion_Contact_1", {
+    event_callback: callback,
+    event_timeout: 2000,
+  });
+  return false;
+}
+
+window.gtagSendEvent = gtagSendEvent;
+
+function trackContactLinkClick(url, openInNewTab) {
+  const navigate = function () {
+    if (typeof url !== "string") return;
+    if (openInNewTab) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    } else {
+      window.location = url;
+    }
+  };
+
+  if (typeof gtag !== "function") {
+    navigate();
+    return;
+  }
+
+  gtag("event", "ads_conversion_Contact_1", {
+    event_callback: navigate,
+    event_timeout: 2000,
+  });
+}
+
+function initContactConversionLinks() {
+  document
+    .querySelectorAll('a[href^="mailto:"], a[href^="tel:"], a[href*="wa.me"]')
+    .forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        trackContactLinkClick(
+          link.getAttribute("href"),
+          link.target === "_blank"
+        );
+      });
+    });
+}
+
 export async function submitContactForm(formElement, apiBaseUrl = API_BASE_URL) {
   const formData = new FormData(formElement);
   const response = await fetch(`${apiBaseUrl.replace(/\/$/, "")}/api/contact`, {
@@ -71,3 +128,4 @@ function initContactForm() {
 }
 
 initContactForm();
+initContactConversionLinks();
