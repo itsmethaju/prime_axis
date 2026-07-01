@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+# IT Solutions, Business Consultancy & PRO Services — Prime Axis Consultancy Qatar
+# https://www.primeaxis.qa/
+
 Sitemap: https://www.primeaxis.qa/sitemap.xml
